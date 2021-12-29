@@ -1,0 +1,79 @@
+/* 
+HEADING
+font-family: 'Poppins', sans-serif;
+
+BODY
+font-family: 'Open Sans', sans-serif;
+
+COLORS
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%) 
+*/
+
+
+html {
+    background-color: hsl(257, 40%, 49%);
+    color: white;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.description {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.facebook , .twitter , .insta {
+    width: 20px;
+    border: black solid 1px;
+    border-radius: 50%;
+    padding: 10px;
+    filter: invert(100%);
+}
+
+
+
+
+
+@media screen and (min-width: 500px) {
+    /* DESKTOP DISPLAY */
+    
+    .mobile {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 720px 550px;
+        grid-template-rows: 100px 550px 100px;
+        grid-template-areas:
+            "h ."
+            "m t"
+            ". i";
+    }
+
+    h1 {
+        grid-area: h;
+    }
+
+    .illustration {
+        grid-area: m;
+    }
+
+    .content {
+        grid-area: t;
+    }
+
+    .icons {
+        grid-area: i;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* MOBILE DISPLAY */
+
+    .desktop {
+        display: none;
+    }
+}
